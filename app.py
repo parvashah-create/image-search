@@ -1,43 +1,27 @@
-import numpy as np
-from PIL import Image
-from feature_extractor import FeatureExtractor
-from datetime import datetime
 import streamlit as st
-from pathlib import Path
+from sections.task_1 import task_1
+from sections.task_3 import task_3
 
-# Read image features
-fe = FeatureExtractor()
-features = []
-img_paths = []
-for feature_path in Path("./static/feature").glob("*.npy"):
-    features.append(np.load(feature_path))
-    img_paths.append(Path("./static/img") / (feature_path.stem + ".jpg"))
-features = np.array(features)
+
 
 
 # Define the Streamlit app
 def main():
-    st.title("Image Retrieval")
 
-    # Upload query image
-    uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
-    if uploaded_file is not None:
-        # Save query image
-        img = Image.open(uploaded_file)  # PIL image
-        uploaded_img_path = "static/uploaded/" + datetime.now().isoformat().replace(":", ".") + "_" + uploaded_file.name
-        img.save(uploaded_img_path)
+    st.title("Assignment 4")
 
-        # Run search
-        query = fe.extract(img)
-        dists = np.linalg.norm(features-query, axis=1)  # L2 distances to features
-        ids = np.argsort(dists)[:10]  # Top 10 results
-        scores = [(dists[id], img_paths[id]) for id in ids]
+    tab1, tab2, tab3 = st.tabs(["Task 1", "Task 3", "Owl"])
 
-        # Display top results
-        st.image(uploaded_file, caption="Query Image", use_column_width="auto")
-        for score in scores:
-            st.image(str(score[1]), caption=f"Distance: {score[0]:.2f}", use_column_width="auto")
+    with tab1:
+        task_1()
+    with tab2:
+        task_3()
 
+    with tab3:
+        st.header("An owl")
+        st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+    
+   
 
 if __name__ == "__main__":
     main()
