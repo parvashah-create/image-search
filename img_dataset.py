@@ -38,4 +38,4 @@ def copy_images(src_dir, dst_dir, num_images):
                 counter += 1
 
 
-# copy_images("/Users/parvashah/Downloads/img", "static/img", num_images=100)
+# copy_images("/Users/parvashah/Downloads/img", "static/img", num_images=10000)

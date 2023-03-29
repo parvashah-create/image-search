@@ -32,7 +32,3 @@ class FeatureExtractor:
 
 
 
-# feature_instance = FeatureExtractor()
-# img = Image.open("./static/img/01_1_front.jpg")
-# img_feature = feature_instance.extract(img)
-# print(img_feature)

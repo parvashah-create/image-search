@@ -62,7 +62,7 @@ def new_index(index_name,dim):
 
     return check
 
-# INDEX_NAME = 'pinecone-image-search'
-# INDEX_DIMENSION = 1000
+INDEX_NAME = 'pinecone-image-search'
+INDEX_DIMENSION = 1000
 
-# print(new_index(INDEX_NAME,INDEX_DIMENSION))
+print(new_index(INDEX_NAME,INDEX_DIMENSION))
