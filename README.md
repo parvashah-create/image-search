@@ -16,9 +16,9 @@ In this task, we will use Pinecone's vector database to speed up the search for 
 ##Deliverables
 The deliverables for this project are as follows:
 
-- Working code on Github
-- Deployed application on Streamlit
-- Documentation on Codelabs
+- Working code on Github - https://github.com/parvashah-create/image-search
+- Deployed application on Streamlit - https://parvashah-create-image-search-app-nx8kxu.streamlit.app/
+- Documentation on Codelabs - https://codelabs-preview.appspot.com/?file_id=1LPZ37K-IXY1ouRWRyelt--iZLZyXlMpLjT04QVGe-MM#5
 
 ## Project Team
 This project is developed by Sri Krishnamurthy as a part of the assignment for Algorithmic marketing analyst role at QU analytics.
