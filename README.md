@@ -13,7 +13,7 @@ In this task, we will use Dall-e to build a site to customize fashion accessorie
 ### Task 3: Image Search Using Pinecone
 In this task, we will use Pinecone's vector database to speed up the search for images. We will integrate Pinecone's approach with Streamlit for the data used in Task 1. We will also compare the performance of Task 1 and Task 3 to see the improvement in search speed.
 
-##Deliverables
+## Deliverables
 The deliverables for this project are as follows:
 
 - Working code on Github - https://github.com/parvashah-create/image-search
